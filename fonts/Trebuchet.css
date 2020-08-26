@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Trebuchet';
+    src: local('Trebuchet'), local('Trebuchet'),
+        url('trebuc.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

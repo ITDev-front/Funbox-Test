@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Exo 2 Thin';
+    src: local('Exo 2 Thin'), local('Exo 2 Thin'),
+        url('/Exo2.0-Thin.1ac4bb9f.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trebuchet';
+    src: local('Trebuchet'), local('Trebuchet'),
+        url('/trebuc.ef2d514a.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body img.bg {
+  position: absolute;
+  width: 100%;
+  opacity: 0.2;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  background: url(/background.e3ad310f.png) 0% 0% no-repeat;
+  background-size: cover;
+}
+.wrapper h1 {
+  padding: 1em 0 0 0;
+  font-family: "Exo 2 Thin";
+  font-size: 2.8vw;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+}
+.wrapper .content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2vw 6.2vw;
+}
+.wrapper .content form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .content .full-item {
+  width: 24.7vw;
+}
+.wrapper .content .full-item .item {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 1vw;
+  background-color: white;
+  border: solid 0.25em #1698d9;
+  border-radius: 0.5em;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+.wrapper .content .full-item .item .item-header {
+  position: relative;
+  width: 100%;
+}
+.wrapper .content .full-item .item .item-header .header-title {
+  padding-left: 2.9em;
+  height: 2.5em;
+  line-height: 3em;
+  font-family: "Trebuchet", sans-serif;
+  font-size: 1.25vw;
+  color: #b9b9b9;
+}
+.wrapper .content .full-item .item .item-main {
+  position: relative;
+}
+.wrapper .content .full-item .item .item-main h1 {
+  padding: 0 0 0 1em;
+  font-family: "Trebuchet";
+  font-size: 3.6vw;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: black;
+  text-align: left;
+}
+.wrapper .content .full-item .item .item-main h2 {
+  padding: 0 0 2.2em 2.1em;
+  font-family: "Trebuchet";
+  font-size: 1.7vw;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  color: black;
+  text-align: left;
+}
+.wrapper .content .full-item .item .item-main .description {
+  position: absolute;
+  top: 76%;
+}
+.wrapper .content .full-item .item .item-main .description h3 {
+  padding: 0 0 0 3.6em;
+  font-family: "Trebuchet", sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  color: #b9b9b9;
+  text-align: left;
+}
+.wrapper .content .full-item .item .item-footer {
+  position: relative;
+  top: 1%;
+  box-sizing: border-box;
+  width: 100%;
+}
+.wrapper .content .full-item .item .item-footer .item-weight {
+  position: absolute;
+  bottom: 1.2vw;
+  right: 1vw;
+  width: 26%;
+  height: 26%;
+  background-color: #1698d9;
+  font-family: "Trebuchet";
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+.wrapper .content .full-item .item .item-footer .item-weight .number {
+  font-size: 3.4vw;
+  padding-top: 0.5vw;
+}
+.wrapper .content .full-item .item .item-footer .item-weight .unit {
+  font-size: 1.5vw;
+  margin: -0.3em 0 0 0;
+}
+.wrapper .content .full-item .item .item-footer img {
+  position: relative;
+  top: 5vw;
+  width: 100%;
+  transform: scale(1.2);
+}
+.wrapper .content .full-item .additional-info {
+  box-sizing: border-box;
+  padding-left: 0.5em;
+  width: 100%;
+  font-family: "Trebuchet", sans-serif;
+  font-size: 0.95vw;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+}
+.wrapper .content .full-item .additional-info a {
+  color: #1698d9;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+  cursor: pointer;
+}
+.wrapper .content .full-item.disabled .item {
+  border-color: #b3b3b3;
+  color: #d4d4d4;
+}
+.wrapper .content .full-item.disabled .item .item-main h1, .wrapper .content .full-item.disabled .item h2, .wrapper .content .full-item.disabled .item h3 {
+  color: #d4d4d4;
+  font-weight: normal;
+}
+.wrapper .content .full-item.disabled .item .item-footer img {
+  opacity: 0.5;
+}
+.wrapper .content .full-item.disabled .item .item-footer .item-weight {
+  background-color: #b3b3b3;
+}
+.wrapper .content .full-item.disabled .additional-info {
+  color: #ffff66;
+}
+.wrapper .content .full-item.selected .item {
+  border-color: #d91667;
+}
+.wrapper .content .full-item.selected .item .item-weight {
+  background-color: #d91667;
+}
+.wrapper .content .full-item.selected-hover .item {
+  border-color: #e62e7a;
+}
+.wrapper .content .full-item.selected-hover .item .header-title {
+  color: #e62e7a;
+}
+.wrapper .content .full-item.selected-hover .item .item-weight {
+  background-color: #e62e7a;
+}
+.wrapper .content .full-item.hover-default .item {
+  border-color: #2ea8e6;
+}
+.wrapper .content .full-item.hover-default .item .item-weight {
+  background-color: #2ea8e6;
+}
+.wrapper .content .full-item.hover-default .additional-info a {
+  color: #2ea8e6;
+}
+
+body img {
+  position: absolute;
+  width: 100%;
+}
+@media (max-width: 720px) {
+  .wrapper h1 {
+    font-size: 5vw;
+  }
+  .wrapper .content {
+    padding: 2vw 2vw;
+  }
+  .wrapper .content form {
+    display: block;
+  }
+  .wrapper .content form .full-item {
+    position: relative;
+    width: 55vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .wrapper .content form .full-item .item .item-header .header-title {
+    font-size: 2.25vw;
+  }
+  .wrapper .content form .full-item .item .item-main h1 {
+    font-size: 6.6vw;
+  }
+  .wrapper .content form .full-item .item .item-main h2 {
+    font-size: 3.2vw;
+  }
+  .wrapper .content form .full-item .item .item-main .description h3 {
+    font-size: 1.85vw;
+  }
+  .wrapper .content form .full-item .item .item-footer img {
+    top: 12vw;
+  }
+  .wrapper .content form .full-item .item .item-footer .item-weight .number {
+    font-size: 6vw;
+    padding-top: 1.5vw;
+  }
+  .wrapper .content form .full-item .item .item-footer .item-weight .unit {
+    font-size: 4vw;
+    margin: -0.3em 0 0 0;
+  }
+  .wrapper .content form .full-item .additional-info {
+    margin-bottom: 1.5vw;
+    font-size: 2.5vw;
+  }
+}
+
+/*# sourceMappingURL=/Funbox-Test.e31bb0bc.css.map */

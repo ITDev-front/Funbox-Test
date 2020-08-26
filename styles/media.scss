@@ -1,0 +1,66 @@
+@media (max-width: 720px) {
+    .wrapper {
+        h1 {
+            font-size: 5vw;
+        }
+        .content {
+            padding: 2vw 2vw;
+
+            form {
+                display: block;
+
+                .full-item {
+                    position: relative;
+                    width: 55vw;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    .item {
+                        .item-header {
+                            .header-title {
+                                font-size: 2.25vw;
+                            }
+                        }
+
+                        .item-main {
+                            h1 {
+                                font-size: 6.6vw;
+                            }
+
+                            h2 {
+                                font-size: 3.2vw;
+                            }
+
+                            .description h3 {
+                                font-size: 1.85vw;
+                            }
+                        }
+
+                        .item-footer {
+                            img {
+                                top: 12vw;
+                            }
+
+                            .item-weight {
+                                .number {
+                                    font-size: 6vw;
+                                    padding-top: 1.5vw;
+                                }
+
+                                .unit {
+                                    font-size: 4vw;
+                                    margin: -0.3em 0 0 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .additional-info {
+                        margin-bottom: 1.5vw;
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+        }
+    }
+}

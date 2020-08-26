@@ -1,0 +1,306 @@
+@import url('../fonts/Exo2.css');
+@import url('../fonts/Trebuchet.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body img.bg {
+    position: absolute;
+    width: 100%;
+    opacity: .2;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+
+    h1 {
+        padding: 1em 0 0 0;
+
+        font-family: 'Exo 2 Thin';
+        font-size: 2.8vw;
+        font-weight: normal;
+        color: white;
+
+        text-align: center;
+    }
+
+    .content {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 2vw 6.2vw;
+
+        form {
+            width: 100%;
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+        .full-item {
+            width: 24.7vw;
+
+            .item {
+                box-sizing: border-box;
+                width: 100%;
+                margin-bottom: 1vw;
+                background-color: white;
+
+                border: solid .25em #1698d9;
+                border-radius: .5em;
+
+                overflow: hidden;
+
+                cursor: pointer;
+
+                user-select: none;
+
+                .item-header {
+                    position: relative;
+                    width: 100%;
+
+                    // Trianagle' styles (30% from prototype)
+
+                    // .triangle::before {
+                    //     position: absolute;
+                    //     top: 50%;
+
+                    //     transform: translateY(-15%) translateX(12%);
+
+                    //     content: "";
+
+                    //     border: solid 1.6em transparent;
+                    //     border-bottom: solid 1.6em white;
+                    //     border-right: solid 1.6em white;
+
+                    //     z-index: 1;
+                    // }
+
+                    // .triangle::after {
+                    //     position: absolute;
+                    //     top: 50%;
+
+                    //     transform: translateY(-26%) translateX(-1%) rotate(179deg);
+
+                    //     content: "";
+
+                    //     border: solid 1.8em transparent;
+                    //     border-top: solid 1.8em #1698d9;
+                    //     border-left: solid 1.8em #1698d9;
+                    // }
+
+                    .header-title {
+                        padding-left: 2.9em;
+                        height: 2.5em;
+                        line-height: 3em;
+
+                        font-family: 'Trebuchet', sans-serif;
+                        font-size: 1.25vw;
+                        color: #b9b9b9;
+                    }
+                }
+
+                .item-main {
+                    position: relative;
+                }
+
+                .item-main h1 {
+                    padding: 0 0 0 1em;
+
+                    font-family: 'Trebuchet';
+                    font-size: 3.6vw;
+                    font-weight: bold;
+                    letter-spacing: .05em;
+                    color: black;
+
+                    text-align: left;
+                }
+
+                .item-main h2 {
+                    padding: 0 0 2.2em 2.1em;
+
+                    font-family: 'Trebuchet';
+                    font-size: 1.7vw;
+                    font-weight: bold;
+                    letter-spacing: .06em;
+                    color: black;
+
+                    text-align: left;
+                }
+
+                .item-main .description {
+                    position: absolute;
+                    top: 76%;
+
+                    h3 {
+                        padding: 0 0 0 3.6em;
+    
+                        font-family: 'Trebuchet', sans-serif;
+                        font-size: 1vw;
+                        font-weight: normal;
+                        letter-spacing: .06em;
+                        color: #b9b9b9;
+    
+                        text-align: left;
+                    }
+                }
+
+                .item-footer {
+                    position: relative;
+                    top: 1%;
+                    box-sizing: border-box;
+                    width: 100%;
+
+                    .item-weight {
+                        position: absolute;
+                        bottom: 1.2vw;
+                        right: 1vw;
+
+                        width: 26%;
+                        height: 26%;
+
+                        background-color: #1698d9;
+
+                        font-family: 'Trebuchet';
+                        color: white;
+
+                        border-radius: 50%;
+
+                        text-align: center;
+
+                        .number {
+                            font-size: 3.4vw;
+                            padding-top: .5vw;
+                        }
+
+                        .unit {
+                            font-size: 1.5vw;
+                            margin: -0.3em 0 0 0;
+                        }
+                    }
+                }
+
+                .item-footer img {
+                    position: relative;
+                    top: 5vw;
+
+                    width: 100%;
+
+                    transform: scale(1.2);
+                }
+            }
+
+            .additional-info {
+                box-sizing: border-box;
+                padding-left: .5em;
+                width: 100%;
+
+                font-family: "Trebuchet", sans-serif;
+                font-size: .95vw;
+                font-weight: normal;
+                letter-spacing: .04em;
+                color: white;
+
+                white-space: nowrap;
+
+                text-align: center;
+                
+                a {
+                    color: #1698d9;
+
+                    text-decoration-style: dashed;
+                    text-underline-position: under;
+                    
+                    cursor: pointer;
+                }
+            }
+        }
+
+        // DISABLED STYLES
+
+        .full-item.disabled {
+            .item {
+                border-color: #b3b3b3;
+                color: #d4d4d4;
+
+                .item-main h1, h2, h3 {
+                    color: #d4d4d4;
+                    font-weight: normal;
+                }
+
+                .item-footer {
+                    img {
+                        opacity: .5;
+                    }
+
+                    .item-weight {
+                        background-color: #b3b3b3;
+                    }
+                }
+            }
+
+            .additional-info {
+                color: #ffff66;
+            }
+        }
+
+        // SELECTED STYLES
+
+        .full-item.selected {
+            .item {
+                border-color: #d91667;
+
+                .item-weight {
+                    background-color: #d91667;
+                }
+            }
+        }
+
+        .full-item.selected-hover {
+            .item {
+                border-color: #e62e7a;
+
+                .header-title {
+                    color: #e62e7a;
+                }
+
+                .item-weight {
+                    background-color: #e62e7a;
+                }
+            }
+        }
+
+        // DEFAULT HOVER STYLES
+
+        .full-item.hover-default {
+            .item {
+                border-color: #2ea8e6;
+
+                .item-weight {
+                    background-color: #2ea8e6;
+                }
+            }
+
+            .additional-info {
+                a {
+                    color: #2ea8e6;
+                }
+            }
+        }
+    }
+
+
+    background: url(../background.png) 0% 0% no-repeat;
+    background-size: cover;
+}
+
+body img {
+    position: absolute;
+    width: 100%;
+}

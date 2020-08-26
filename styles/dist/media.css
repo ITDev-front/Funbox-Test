@@ -1,0 +1,44 @@
+@media (max-width: 720px) {
+  .wrapper h1 {
+    font-size: 5vw;
+  }
+  .wrapper .content {
+    padding: 2vw 2vw;
+  }
+  .wrapper .content form {
+    display: block;
+  }
+  .wrapper .content form .full-item {
+    position: relative;
+    width: 55vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .wrapper .content form .full-item .item .item-header .header-title {
+    font-size: 2.25vw;
+  }
+  .wrapper .content form .full-item .item .item-main h1 {
+    font-size: 6.6vw;
+  }
+  .wrapper .content form .full-item .item .item-main h2 {
+    font-size: 3.2vw;
+  }
+  .wrapper .content form .full-item .item .item-main .description h3 {
+    font-size: 1.85vw;
+  }
+  .wrapper .content form .full-item .item .item-footer img {
+    top: 12vw;
+  }
+  .wrapper .content form .full-item .item .item-footer .item-weight .number {
+    font-size: 6vw;
+    padding-top: 1.5vw;
+  }
+  .wrapper .content form .full-item .item .item-footer .item-weight .unit {
+    font-size: 4vw;
+    margin: -0.3em 0 0 0;
+  }
+  .wrapper .content form .full-item .additional-info {
+    margin-bottom: 1.5vw;
+    font-size: 2.5vw;
+  }
+}
